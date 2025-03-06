@@ -1,0 +1,321 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family:'Poppins',sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: white;
+  color: rgb(131, 182, 55);
+}
+
+.Header{
+  display: flex;
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  padding: 0 249px;
+  background-color: white;
+  /* position: fixed; */
+  align-items: center;
+  justify-content: space-between;
+  /* z-index: 1; */
+}
+
+.Header ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 0 30px;
+}
+
+.Header ul li:last-child{
+  margin-right: 0;
+}
+
+.Header ul li a{
+  text-decoration: none;
+  color: rgb(131, 182, 55);
+  padding: 22px 0;
+  display: inline-block;
+  transition: all ease 0.3s;
+  font-size: 18px;
+}
+
+.Header ul li a:hover{
+  color: black;
+}
+
+.Header ul .submenu{
+  position: absolute;
+  width: 200px;
+  background-color:whitesmoke;
+  margin-top: -50px;
+  opacity: 0;
+  z-index: -999;
+  transition: all ease 0.5s;
+}
+
+.Header ul li:hover .submenu{
+  z-index: 99;
+  opacity: 1;
+  margin-top: 0;
+}
+
+.Header ul .submenu li{
+  margin: 0;
+  width: 100%;
+}
+
+.Header ul .submenu li a{
+  padding: 15px 10px;
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
+  color: rgb(131, 182, 55);
+  width: 100%;
+  transition: 0.5 ease;
+}
+
+.Header ul .submenu li a:hover{
+  color: black;
+}
+
+
+.Logo{
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(131, 182, 55);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.Logo:hover{
+  transform: scale(1.1);
+}
+
+span{
+  color: black;
+}
+
+.Navbar a{
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  color: rgb(131, 182, 55);
+  border-bottom: 2px solid transparent;
+  margin-left: 20px;
+  transition: 0.5s ease;
+}
+
+
+
+.Chat{
+  color: black;
+  transition: 0.1s ease;
+}
+
+.Chat:hover{
+  border-bottom: 2px solid rgb(131, 182, 55);
+}
+
+section{
+  padding: 64px 12%;
+  min-height:100vh;
+}
+
+.shop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-content h1{
+  font-size: 45px;
+  font-weight: 700;
+  color: black;
+  display:flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 45px;
+  animation: transitionIn 0.75s;
+}
+
+.shop-content h3{
+  font-size: 20px;
+  font-weight: 700;
+  animation: transitionIn 0.75s;
+}
+
+.shop-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  animation: transitionIn 0.75s;
+}
+
+.products{
+  width: 200px;
+  margin: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+  animation: transitionIn 0.75s;
+}
+
+
+.name p{
+  font-size: 15px;
+  font-weight: 700;
+  color: black;
+  animation: transitionIn 0.75s;
+}
+
+.Image{
+  flex-wrap: wrap;
+  max-width:100%;
+  max-height:100%;
+  margin: 10px 10px;
+  object-fit: contain;
+  padding: 10px 10px;
+  cursor: pointer;
+  animation: transitionIn 0.75s;
+}
+
+.products:hover{
+  background-color: rgb(131, 182, 55);
+}
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgb(131, 182, 55);
+}
+
+::-webkit-scrollbar-track{
+  background-color: white;
+}
+
+footer{
+  padding: 50px 0;
+}
+
+.footer .copyright{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(131, 182, 55);
+}
+
+@keyframes transitionIn{
+  from{
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to{
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Header (Navbar) */
+  .Header {
+    padding: 0 40px; /* Increased padding for better visibility */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Navbar links container */
+  .Header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Slightly larger gap between links for visibility */
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Navbar list items */
+  .Header ul li {
+    display: inline-block;
+    margin: 0 15px; /* Increased margin for better spacing */
+  }
+
+  /* Navbar links */
+  .Header ul li a {
+    font-size: 13px; /* Increased font size for better readability */
+    padding: 12px 20px; /* Adjusted padding for better clickability */
+  }
+  .Header {
+    padding: 0 50px;
+  }
+
+  /* Increase padding around the whole home section for more space */
+
+.Logo{
+  font-size: 15px;
+}
+}
+
+
+  /* Mobile (Below 768px) */
+@media (max-width: 768px) {
+  /* Header (Navbar) */
+  .Header {
+    padding: 0 20px; /* Reduce padding to make the navbar more compact */
+    flex-direction: row; /* Keep the logo and navbar items in a row */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Navbar links container */
+  .Header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;  /* Reduced gap between links */
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Navbar list items */
+  .Header ul li {
+    display: inline-block;
+    margin: 0 1px;  /* Reduced margin to make navbar more compact */
+  }
+
+  /* Navbar links */
+  .Header ul li a {
+    font-size: 7px;  /* Smaller font for links */
+    padding: 8px 1px;  /* Reduced padding around links */
+  }
+
+  /* Logo size */
+  .Logo {
+    font-size: 12px;  /* Smaller logo */
+  }
+}
+
+
+  .Navbar a{
+    font-size: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    color: rgb(131, 182, 55);
+    border-bottom: 2px solid transparent;
+    transition: 0.5s ease;
+  }
